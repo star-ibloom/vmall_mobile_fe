@@ -1,0 +1,59 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">评论添加</h3>
+  </div>
+  <!-- /.box-header -->
+  <!-- form start -->
+  <form class="form-horizontal" id="possave" enctype="multipart/form-data" action="/api/comment/save" method="POST" >
+    <div class="box-body">
+      <div class="form-group">
+        <label for="CommentPic" class="col-sm-2 control-label">评论图片</label>
+
+        <div class="col-sm-10">
+          <input type="file" class="form-control" name="CommentPic" id="CommentPic" placeholder="请选择评论图片">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="goodNum" class="col-sm-2 control-label">点赞个数</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="goodNum" id="goodNum" placeholder="点赞个数">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="CommentTitle" class="col-sm-2 control-label">评论标题</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="CommentTitle" id="CommentTitle" placeholder="请输入评论标题">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="CommentFrom" class="col-sm-2 control-label">评论来自</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="CommentFrom" id="CommentFrom" placeholder="请输入评论来自">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="CommentBody" class="col-sm-2 control-label">评论主体</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="CommentBody" id="CommentBody" placeholder="请输入评论主体">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="CommentPhone" class="col-sm-2 control-label">评论手机</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="CommentPhone" id="CommentPhone" placeholder="请输入评论手机">
+        </div>
+      </div>
+      
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <button type="button" id="addback" class="btn btn-default">返回</button>
+      <button type="button" id="addsubmit" class="btn btn-info pull-right">提交</button>
+    </div>
+    <!-- /.box-footer -->
+  </form>
+</div>
