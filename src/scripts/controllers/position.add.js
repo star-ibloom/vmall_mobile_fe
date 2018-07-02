@@ -21,24 +21,6 @@ module.exports = {
       };  
       $("#possave").ajaxSubmit(options)
 
-      // let goodNum = $('#goodNum').val(),
-      // CommentTitle = $('#CommentTitle').val(),
-      // CommentFrom = $('#CommentFrom').val(),
-      // CommentBody = $('#CommentBody').val(),
-      // CommentPhone = $('#CommentPhone').val()
-
-      // const result = await positionModel.list({
-      //     goodNum,
-      //     CommentTitle,
-      //     CommentFrom,
-      //     CommentBody,
-      //     CommentPhone,
-      // })
-
-      // if(result.ret){
-      //   router.back()
-      // }
-
   }) 
   },
 

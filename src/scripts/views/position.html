@@ -19,23 +19,28 @@
 
         <th style="width: 140px">操作</th>
       </tr>
-      {{each data}}
-      <tr>
-        <td>1.</td>
-        <td><img width="50" height="50" src="http://localhost:3000/uploads/{{$value.CommentPic}}" alt=""></td>
-        <td>{{$value.goodNum}}</td>
-        <td>{{$value.CommentTitle}}</td>
-        <td>{{$value.CommentFrom}}</td>
-        <td>{{$value.CommentBody}}</td>
-        <td>{{$value.CommentPhone}}</td>
-        <td>{{$value.CreatTime}}</td>
-
-        <td>
-          <button class="btn btn-sm btn-primary"><span class="fa fa-edit"></span> 修改</button>
-          <button class="btn btn-sm btn-danger"><span class="fa fa-remove"></span> 删除</button>
-        </td>
-      </tr>
-      {{/each}}
+      {{if data.length>0}}
+        {{each data}}
+        <tr>
+          <td>{{$index+1}}</td>
+          <td><img width="50" height="50" src="http://localhost:3000/uploads/{{$value.CommentPic}}" alt=""></td>
+          <td>{{$value.goodNum}}</td>
+          <td>{{$value.CommentTitle}}</td>
+          <td>{{$value.CommentFrom}}</td>
+          <td>{{$value.CommentBody}}</td>
+          <td>{{$value.CommentPhone}}</td>
+          <td>{{$value.CreatTime}}</td>
+          <td>
+            <button class="btn btn-sm btn-primary"><span class="fa fa-edit"></span> 修改</button>
+            <button class="btn btn-sm btn-danger" posid="{{$value._id}}" filename="{{$value.CommentPic}}"><span class="fa fa-remove"></span> 删除</button>
+          </td>
+        </tr>
+        {{/each}}
+      {{else}}
+        <tr>
+          <td colspan="9">暂无记录。</td>
+        </tr>
+      {{/if}}
     </table>
   </div>
   <!-- /.box-body -->

@@ -11,7 +11,11 @@ router.route('/position', (req, res, next) => {
 })
 
 router.route('/position_save', (req, res, next) => {
-  positionAddController.render({router, req, res, next})
+  positionAddController.render({ req, res, next,router})
+})
+
+router.route('/position_save', (req, res, next) => {
+  positionAddController.render({ req, res, next,router})
 })
 
 router.route('/home', (req, res, next) => {
